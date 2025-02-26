@@ -1,3 +1,4 @@
+%%writefile app.py
 # --- Importing Libraries ------ (These are used to simplify the code.)
 import streamlit as st
 import pandas as pd
@@ -20,7 +21,9 @@ st.subheader("Report an Incident") #-- This line is a subheading that shows to r
 with st.form("incident_report"):
     report_type = st.selectbox("Incident Type", incident_types) #-- This gives the user options to select the incident types
     report_age = st.number_input("Victim's Age", min_value=0, max_value=18, value=0) #-- This one gives the user to select the victim's age
+    report_gender = st.selectbox("Victim's Gender", ["Male", "Female", "Other"]) #-- This one gives the user to select the victim's gender
     report_address = st.text_input("Victim's Address") #-- This one gives the user to enter the victim's address
+    report_location = st.text_input("Location of the Incident") #-- This one gives the user to enter the location of the incident
     report_description = st.text_area("Description of the Incident") #-- This one gives the user to enter the description of the incident
     report_date = st.date_input("Date of the Incident") #-- This one gives the user to enter the date of the incident
     report_time = st.time_input("Time of the Incident") #-- This one gives the user to enter the time of the incident

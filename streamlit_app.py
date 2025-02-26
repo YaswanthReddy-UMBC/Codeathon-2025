@@ -1,4 +1,3 @@
-%%writefile app.py
 # --- Importing Libraries ------ (These are used to simplify the code.)
 import streamlit as st
 import pandas as pd
